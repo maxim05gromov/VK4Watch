@@ -1,16 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19115.2" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G9a-c2-3il">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19026"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
+        <scene sceneID="Xcw-Ut-1Aw">
+            <objects>
+                <controller id="G9a-c2-3il" customClass="InterfaceController" customModule="VK4Watch_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="center" verticalAlignment="center" text="Добро Пожаловать!" textAlignment="center" numberOfLines="0" id="Ngl-R4-W5J">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                        </label>
+                        <label alignment="center" verticalAlignment="center" text="Прежде чем начать пользоваться данным приложением на часах, войдите в свой аккаунт на телефоне" textAlignment="center" numberOfLines="0" id="vzT-bP-Fnr">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Тест" id="gOY-t5-MZM">
+                            <connections>
+                                <segue destination="AgC-eL-Hgc" kind="modal" id="Pmv-f4-OFJ"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-64" y="635"/>
+        </scene>
+        <!--NewsObject-->
+        <scene sceneID="0Z3-Cy-UhD">
+            <objects>
+                <controller identifier="NewsObject" id="Pap-vg-PrT" customClass="NewsObjectInterfaceController" customModule="VK4Watch_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="RXb-2N-iIW">
+                            <items>
+                                <imageView width="35" height="35" alignment="left" verticalAlignment="center" image="WylsaIcon" id="QB7-Iv-oiR"/>
+                                <group width="109" alignment="left" layout="vertical" id="TN6-LG-BcL">
+                                    <items>
+                                        <label width="104" alignment="left" text="Wylsacom" id="cRt-0K-AoE">
+                                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                        </label>
+                                        <label alignment="left" text="Label" id="VSI-j4-TDg">
+                                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <label width="1" alignment="center" text="Текст" textAlignment="left" numberOfLines="0" id="oxo-qC-adm"/>
+                        <imageView alignment="center" id="XfT-gK-QhL"/>
+                        <label width="1" alignment="center" text="Загрузка картинки..." textAlignment="center" numberOfLines="0" id="9yU-BD-Lny"/>
+                    </items>
+                    <connections>
+                        <outlet property="body" destination="oxo-qC-adm" id="I3j-cQ-Tcx"/>
+                        <outlet property="icon" destination="QB7-Iv-oiR" id="rqa-Nn-O3X"/>
+                        <outlet property="loading" destination="9yU-BD-Lny" id="dZK-1L-nmI"/>
+                        <outlet property="name" destination="cRt-0K-AoE" id="eHO-Z8-u4a"/>
+                        <outlet property="photo" destination="XfT-gK-QhL" id="rX2-o0-aRs"/>
+                        <outlet property="time" destination="VSI-j4-TDg" id="LOU-Gj-EjZ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-179" y="1507"/>
+        </scene>
+        <!--Новости-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller identifier="NewsPage" title="Новости" id="AgC-eL-Hgc" customClass="NewsInterfaceController" customModule="VK4Watch_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="Axj-L4-8Zz">
+                            <items>
+                                <tableRow identifier="Cell" id="KSt-hg-mVU" customClass="TableRowController" customModule="VK4Watch_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="MpC-9M-yn4">
+                                        <items>
+                                            <group width="1" alignment="left" id="5zm-FD-jce">
+                                                <items>
+                                                    <imageView width="35" height="35" alignment="left" verticalAlignment="center" image="WylsaIcon" id="v0c-hP-A7R"/>
+                                                    <group width="1" alignment="left" layout="vertical" id="fSL-Zw-yT8">
+                                                        <items>
+                                                            <label width="107" alignment="left" text="Wylsacom" id="bV0-kn-oW5">
+                                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                            </label>
+                                                            <label width="109" alignment="left" text="час назад" id="cKm-0U-EPr">
+                                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                            </label>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                            <label width="1" alignment="center" text="Google обновила виджет поиска для iOS - добавили новые темы оформления" numberOfLines="5" id="v4m-4I-P8S">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                            </label>
+                                            <label width="136" alignment="center" text="Прикреплено изображение" textAlignment="center" numberOfLines="0" id="zf0-li-AqO">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="AttachedPicture" destination="zf0-li-AqO" id="IFh-hs-xpp"/>
+                                        <outlet property="BodyText" destination="v4m-4I-P8S" id="k0j-TC-MhA"/>
+                                        <outlet property="Image" destination="v0c-hP-A7R" id="OkS-Vy-7gE"/>
+                                        <outlet property="NameText" destination="bV0-kn-oW5" id="i5j-Ni-L4b"/>
+                                        <outlet property="TimeAgo" destination="cKm-0U-EPr" id="qZa-mp-1Iu"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label width="1" alignment="center" verticalAlignment="center" text="Загрузка..." textAlignment="center" numberOfLines="0" id="PX1-pq-mdh"/>
+                    </items>
+                    <connections>
+                        <outlet property="TableView" destination="Axj-L4-8Zz" id="qxE-zI-G6y"/>
+                        <outlet property="loadingLabel" destination="PX1-pq-mdh" id="YiF-vZ-HCb"/>
+                        <segue destination="H9Q-zV-7Ro" kind="relationship" relationship="nextPage" id="Tse-wK-EOb"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="-179" y="1110"/>
+        </scene>
+        <!--Сообщения-->
+        <scene sceneID="vcA-ff-K21">
+            <objects>
+                <controller title="Сообщения" id="H9Q-zV-7Ro" customClass="MsgInterfaceController" customModule="VK4Watch_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" hidden="YES" id="6zc-bk-6qJ">
+                            <items>
+                                <tableRow identifier="MsgCell" id="hpZ-w4-T5a">
+                                    <group key="rootItem" width="1" alignment="left" id="eyj-uo-YtQ">
+                                        <items>
+                                            <imageView width="30" height="30" alignment="left" verticalAlignment="center" image="MaximIcon" id="gOk-fL-Uu2"/>
+                                            <label alignment="left" verticalAlignment="center" text="Максим" id="x66-OA-aBF">
+                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                            </label>
+                                        </items>
+                                        <connections>
+                                            <segue destination="Amq-kS-Qjg" kind="push" id="oKi-sd-mro"/>
+                                        </connections>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <label alignment="center" verticalAlignment="center" text="К сожалению, пока что сообщения не работают. Ждём разрешения от разработчиков ВК" textAlignment="center" numberOfLines="0" id="GJd-2X-sRH"/>
+                    </items>
+                    <connections>
+                        <outlet property="TableView" destination="6zc-bk-6qJ" id="VTt-aX-dFW"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="37" y="1110"/>
+        </scene>
+        <!--Максим-->
+        <scene sceneID="cYq-Xg-Rhl">
+            <objects>
+                <controller identifier="Message" title="Максим" id="Amq-kS-Qjg" customClass="ChatInterfaceController" customModule="VK4Watch_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="pqx-Ev-KNs">
+                            <items>
+                                <tableRow identifier="ChatCell" id="jSZ-kB-b5F">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" radius="10" id="9j9-dd-Bjf">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Label" textAlignment="right" id="Vnt-Xm-NMq"/>
+                                            <imageView alignment="center" verticalAlignment="center" id="f8t-Kz-I0f"/>
+                                        </items>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </group>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="TableView" destination="pqx-Ev-KNs" id="AG5-Wn-G8b"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="37" y="1502"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -32,16 +196,24 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="VK4Watch_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="VK4Watch_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.4779999852180481" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="MaximIcon" width="50" height="50"/>
+        <image name="WylsaIcon" width="50" height="50"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.4779999852180481" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

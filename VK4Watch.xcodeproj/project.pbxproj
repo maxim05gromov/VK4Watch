@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B59C8F44266E6FDA003E4882 /* NewsObjectInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C8F43266E6FDA003E4882 /* NewsObjectInterfaceController.swift */; };
+		B59CBD1D266D2ED100C49C8C /* TableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59CBD1C266D2ED100C49C8C /* TableRowController.swift */; };
+		B5E707D8266FF9B700681F60 /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E707D7266FF9B700681F60 /* Objects.swift */; };
 		B5FA98C9266A78DE00CF2C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA98C8266A78DE00CF2C55 /* AppDelegate.swift */; };
 		B5FA98CB266A78DE00CF2C55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA98CA266A78DE00CF2C55 /* SceneDelegate.swift */; };
 		B5FA98CD266A78DE00CF2C55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA98CC266A78DE00CF2C55 /* ViewController.swift */; };
@@ -22,9 +25,26 @@
 		B5FA98F2266A78E000CF2C55 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA98F1266A78E000CF2C55 /* NotificationController.swift */; };
 		B5FA98F4266A78E000CF2C55 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA98F3266A78E000CF2C55 /* ComplicationController.swift */; };
 		B5FA98F6266A78E100CF2C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5FA98F5266A78E100CF2C55 /* Assets.xcassets */; };
+		B5FA9907266A7F9B00CF2C55 /* NewsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA9906266A7F9B00CF2C55 /* NewsInterfaceController.swift */; };
+		B5FA9909266A818B00CF2C55 /* MsgInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA9908266A818B00CF2C55 /* MsgInterfaceController.swift */; };
+		B5FA990B266AA32600CF2C55 /* ChatInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA990A266AA32600CF2C55 /* ChatInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		B52C7FED2670A51E0093D2E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5FA98BD266A78DE00CF2C55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5FA98D8266A78DF00CF2C55;
+			remoteInfo = "VK4Watch WatchKit App";
+		};
+		B5DC4BAB2670A3FB0067D2EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5FA98BD266A78DE00CF2C55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5FA98E7266A78E000CF2C55;
+			remoteInfo = "VK4Watch WatchKit Extension";
+		};
 		B5FA98DB266A78DF00CF2C55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B5FA98BD266A78DE00CF2C55 /* Project object */;
@@ -67,6 +87,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B52C7FE92670A51E0093D2E3 /* VK4Watch WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VK4Watch WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B59C8F43266E6FDA003E4882 /* NewsObjectInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsObjectInterfaceController.swift; sourceTree = "<group>"; };
+		B59CBD1C266D2ED100C49C8C /* TableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowController.swift; sourceTree = "<group>"; };
+		B5DC4BA72670A3FB0067D2EA /* VK4Watch WatchKit ExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VK4Watch WatchKit ExtensionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E707D7266FF9B700681F60 /* Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
 		B5FA98C5266A78DE00CF2C55 /* VK4Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK4Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FA98C8266A78DE00CF2C55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5FA98CA266A78DE00CF2C55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,9 +112,26 @@
 		B5FA98F5266A78E100CF2C55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5FA98F7266A78E100CF2C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5FA98F8266A78E100CF2C55 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		B5FA9906266A7F9B00CF2C55 /* NewsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInterfaceController.swift; sourceTree = "<group>"; };
+		B5FA9908266A818B00CF2C55 /* MsgInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgInterfaceController.swift; sourceTree = "<group>"; };
+		B5FA990A266AA32600CF2C55 /* ChatInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B52C7FE62670A51E0093D2E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5DC4BA42670A3FB0067D2EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B5FA98C2266A78DE00CF2C55 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,6 +165,8 @@
 				B5FA98C5266A78DE00CF2C55 /* VK4Watch.app */,
 				B5FA98D9266A78DF00CF2C55 /* VK4Watch WatchKit App.app */,
 				B5FA98E8266A78E000CF2C55 /* VK4Watch WatchKit Extension.appex */,
+				B5DC4BA72670A3FB0067D2EA /* VK4Watch WatchKit ExtensionTests.xctest */,
+				B52C7FE92670A51E0093D2E3 /* VK4Watch WatchKit AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +205,12 @@
 				B5FA98F5266A78E100CF2C55 /* Assets.xcassets */,
 				B5FA98F7266A78E100CF2C55 /* Info.plist */,
 				B5FA98F8266A78E100CF2C55 /* PushNotificationPayload.apns */,
+				B5FA9906266A7F9B00CF2C55 /* NewsInterfaceController.swift */,
+				B5FA9908266A818B00CF2C55 /* MsgInterfaceController.swift */,
+				B5FA990A266AA32600CF2C55 /* ChatInterfaceController.swift */,
+				B59CBD1C266D2ED100C49C8C /* TableRowController.swift */,
+				B59C8F43266E6FDA003E4882 /* NewsObjectInterfaceController.swift */,
+				B5E707D7266FF9B700681F60 /* Objects.swift */,
 			);
 			path = "VK4Watch WatchKit Extension";
 			sourceTree = "<group>";
@@ -168,6 +218,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B52C7FE82670A51E0093D2E3 /* VK4Watch WatchKit AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B52C7FEF2670A51E0093D2E3 /* Build configuration list for PBXNativeTarget "VK4Watch WatchKit AppUITests" */;
+			buildPhases = (
+				B52C7FE52670A51E0093D2E3 /* Sources */,
+				B52C7FE62670A51E0093D2E3 /* Frameworks */,
+				B52C7FE72670A51E0093D2E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B52C7FEE2670A51E0093D2E3 /* PBXTargetDependency */,
+			);
+			name = "VK4Watch WatchKit AppUITests";
+			productName = "VK4Watch WatchKit AppUITests";
+			productReference = B52C7FE92670A51E0093D2E3 /* VK4Watch WatchKit AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B5DC4BA62670A3FB0067D2EA /* VK4Watch WatchKit ExtensionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5DC4BAF2670A3FB0067D2EA /* Build configuration list for PBXNativeTarget "VK4Watch WatchKit ExtensionTests" */;
+			buildPhases = (
+				B5DC4BA32670A3FB0067D2EA /* Sources */,
+				B5DC4BA42670A3FB0067D2EA /* Frameworks */,
+				B5DC4BA52670A3FB0067D2EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5DC4BAC2670A3FB0067D2EA /* PBXTargetDependency */,
+			);
+			name = "VK4Watch WatchKit ExtensionTests";
+			productName = "VK4Watch WatchKit ExtensionTests";
+			productReference = B5DC4BA72670A3FB0067D2EA /* VK4Watch WatchKit ExtensionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B5FA98C4266A78DE00CF2C55 /* VK4Watch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5FA9903266A78E100CF2C55 /* Build configuration list for PBXNativeTarget "VK4Watch" */;
@@ -227,9 +313,17 @@
 		B5FA98BD266A78DE00CF2C55 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					B52C7FE82670A51E0093D2E3 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = B5FA98D8266A78DF00CF2C55;
+					};
+					B5DC4BA62670A3FB0067D2EA = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = B5FA98E7266A78E000CF2C55;
+					};
 					B5FA98C4266A78DE00CF2C55 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -238,6 +332,7 @@
 					};
 					B5FA98E7266A78E000CF2C55 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -257,11 +352,27 @@
 				B5FA98C4266A78DE00CF2C55 /* VK4Watch */,
 				B5FA98D8266A78DF00CF2C55 /* VK4Watch WatchKit App */,
 				B5FA98E7266A78E000CF2C55 /* VK4Watch WatchKit Extension */,
+				B5DC4BA62670A3FB0067D2EA /* VK4Watch WatchKit ExtensionTests */,
+				B52C7FE82670A51E0093D2E3 /* VK4Watch WatchKit AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B52C7FE72670A51E0093D2E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5DC4BA52670A3FB0067D2EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B5FA98C3266A78DE00CF2C55 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -292,6 +403,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B52C7FE52670A51E0093D2E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5DC4BA32670A3FB0067D2EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B5FA98C1266A78DE00CF2C55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,16 +431,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5FA9907266A7F9B00CF2C55 /* NewsInterfaceController.swift in Sources */,
 				B5FA98F2266A78E000CF2C55 /* NotificationController.swift in Sources */,
 				B5FA98F4266A78E000CF2C55 /* ComplicationController.swift in Sources */,
+				B59C8F44266E6FDA003E4882 /* NewsObjectInterfaceController.swift in Sources */,
+				B5FA990B266AA32600CF2C55 /* ChatInterfaceController.swift in Sources */,
 				B5FA98F0266A78E000CF2C55 /* ExtensionDelegate.swift in Sources */,
+				B5E707D8266FF9B700681F60 /* Objects.swift in Sources */,
 				B5FA98EE266A78E000CF2C55 /* InterfaceController.swift in Sources */,
+				B5FA9909266A818B00CF2C55 /* MsgInterfaceController.swift in Sources */,
+				B59CBD1D266D2ED100C49C8C /* TableRowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		B52C7FEE2670A51E0093D2E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5FA98D8266A78DF00CF2C55 /* VK4Watch WatchKit App */;
+			targetProxy = B52C7FED2670A51E0093D2E3 /* PBXContainerItemProxy */;
+		};
+		B5DC4BAC2670A3FB0067D2EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5FA98E7266A78E000CF2C55 /* VK4Watch WatchKit Extension */;
+			targetProxy = B5DC4BAB2670A3FB0067D2EA /* PBXContainerItemProxy */;
+		};
 		B5FA98DC266A78DF00CF2C55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B5FA98D8266A78DF00CF2C55 /* VK4Watch WatchKit App */;
@@ -356,6 +497,106 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B52C7FF02670A51E0093D2E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R2Q775TYR;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "GM.VK4Watch-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "VK4Watch WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		B52C7FF12670A51E0093D2E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R2Q775TYR;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "GM.VK4Watch-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "VK4Watch WatchKit App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		B5DC4BAD2670A3FB0067D2EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R2Q775TYR;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "GM.VK4Watch-WatchKit-ExtensionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VK4Watch WatchKit Extension.appex/VK4Watch WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		B5DC4BAE2670A3FB0067D2EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5R2Q775TYR;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "GM.VK4Watch-WatchKit-ExtensionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VK4Watch WatchKit Extension.appex/VK4Watch WatchKit Extension";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
 		B5FA98F9266A78E100CF2C55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -471,6 +712,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5R2Q775TYR;
 				INFOPLIST_FILE = "VK4Watch WatchKit Extension/Info.plist";
@@ -483,6 +725,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.4;
@@ -493,6 +736,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5R2Q775TYR;
 				INFOPLIST_FILE = "VK4Watch WatchKit Extension/Info.plist";
@@ -599,6 +843,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B52C7FEF2670A51E0093D2E3 /* Build configuration list for PBXNativeTarget "VK4Watch WatchKit AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B52C7FF02670A51E0093D2E3 /* Debug */,
+				B52C7FF12670A51E0093D2E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5DC4BAF2670A3FB0067D2EA /* Build configuration list for PBXNativeTarget "VK4Watch WatchKit ExtensionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5DC4BAD2670A3FB0067D2EA /* Debug */,
+				B5DC4BAE2670A3FB0067D2EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B5FA98C0266A78DE00CF2C55 /* Build configuration list for PBXProject "VK4Watch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

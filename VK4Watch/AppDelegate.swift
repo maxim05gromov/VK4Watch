@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import WatchConnectivity
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
