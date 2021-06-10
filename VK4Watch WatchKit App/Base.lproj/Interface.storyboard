@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19115.2" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="G9a-c2-3il">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19115.2" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38"/>
     <dependencies>
         <deployment identifier="watchOS"/>
@@ -8,27 +8,6 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="Xcw-Ut-1Aw">
-            <objects>
-                <controller id="G9a-c2-3il" customClass="InterfaceController" customModule="VK4Watch_WatchKit_Extension">
-                    <items>
-                        <label width="136" alignment="center" verticalAlignment="center" text="Добро Пожаловать!" textAlignment="center" numberOfLines="0" id="Ngl-R4-W5J">
-                            <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
-                        </label>
-                        <label alignment="center" verticalAlignment="center" text="Прежде чем начать пользоваться данным приложением на часах, войдите в свой аккаунт на телефоне" textAlignment="center" numberOfLines="0" id="vzT-bP-Fnr">
-                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                        </label>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Тест" id="gOY-t5-MZM">
-                            <connections>
-                                <segue destination="AgC-eL-Hgc" kind="modal" id="Pmv-f4-OFJ"/>
-                            </connections>
-                        </button>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="-64" y="635"/>
-        </scene>
         <!--NewsObject-->
         <scene sceneID="0Z3-Cy-UhD">
             <objects>
@@ -36,20 +15,20 @@
                     <items>
                         <group width="1" alignment="left" id="RXb-2N-iIW">
                             <items>
-                                <imageView width="35" height="35" alignment="left" verticalAlignment="center" image="WylsaIcon" id="QB7-Iv-oiR"/>
+                                <imageView width="35" height="35" alignment="left" verticalAlignment="center" id="QB7-Iv-oiR"/>
                                 <group width="109" alignment="left" layout="vertical" id="TN6-LG-BcL">
                                     <items>
-                                        <label width="104" alignment="left" text="Wylsacom" id="cRt-0K-AoE">
+                                        <label width="104" alignment="left" id="cRt-0K-AoE">
                                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                         </label>
-                                        <label alignment="left" text="Label" id="VSI-j4-TDg">
+                                        <label alignment="left" id="VSI-j4-TDg">
                                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                         </label>
                                     </items>
                                 </group>
                             </items>
                         </group>
-                        <label width="1" alignment="center" text="Текст" textAlignment="left" numberOfLines="0" id="oxo-qC-adm"/>
+                        <label width="1" alignment="center" textAlignment="left" numberOfLines="0" id="oxo-qC-adm"/>
                         <imageView alignment="center" id="XfT-gK-QhL"/>
                         <label width="1" alignment="center" text="Загрузка картинки..." textAlignment="center" numberOfLines="0" id="9yU-BD-Lny"/>
                     </items>
@@ -70,6 +49,12 @@
             <objects>
                 <controller identifier="NewsPage" title="Новости" id="AgC-eL-Hgc" customClass="NewsInterfaceController" customModule="VK4Watch_WatchKit_Extension">
                     <items>
+                        <label width="136" alignment="center" verticalAlignment="center" text="Добро Пожаловать!" textAlignment="center" numberOfLines="0" id="Ngl-R4-W5J">
+                            <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                        </label>
+                        <label alignment="center" verticalAlignment="center" text="Прежде чем начать пользоваться данным приложением на часах, войдите в свой аккаунт на телефоне" textAlignment="center" numberOfLines="0" id="vzT-bP-Fnr">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
                         <table alignment="left" id="Axj-L4-8Zz">
                             <items>
                                 <tableRow identifier="Cell" id="KSt-hg-mVU" customClass="TableRowController" customModule="VK4Watch_WatchKit_Extension">
@@ -77,20 +62,20 @@
                                         <items>
                                             <group width="1" alignment="left" id="5zm-FD-jce">
                                                 <items>
-                                                    <imageView width="35" height="35" alignment="left" verticalAlignment="center" image="WylsaIcon" id="v0c-hP-A7R"/>
+                                                    <imageView width="35" height="35" alignment="left" verticalAlignment="center" id="v0c-hP-A7R"/>
                                                     <group width="1" alignment="left" layout="vertical" id="fSL-Zw-yT8">
                                                         <items>
-                                                            <label width="107" alignment="left" text="Wylsacom" id="bV0-kn-oW5">
+                                                            <label width="107" alignment="left" id="bV0-kn-oW5">
                                                                 <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                                                             </label>
-                                                            <label width="109" alignment="left" text="час назад" id="cKm-0U-EPr">
+                                                            <label width="109" alignment="left" id="cKm-0U-EPr">
                                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                                             </label>
                                                         </items>
                                                     </group>
                                                 </items>
                                             </group>
-                                            <label width="1" alignment="center" text="Google обновила виджет поиска для iOS - добавили новые темы оформления" numberOfLines="5" id="v4m-4I-P8S">
+                                            <label width="1" alignment="center" numberOfLines="5" id="v4m-4I-P8S">
                                                 <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                             </label>
                                             <label width="136" alignment="center" text="Прикреплено изображение" textAlignment="center" numberOfLines="0" id="zf0-li-AqO">
@@ -112,17 +97,19 @@
                     </items>
                     <connections>
                         <outlet property="TableView" destination="Axj-L4-8Zz" id="qxE-zI-G6y"/>
+                        <outlet property="WelcomeLabel1" destination="Ngl-R4-W5J" id="52L-7o-OXm"/>
+                        <outlet property="WelcomeLabel2" destination="vzT-bP-Fnr" id="EFT-nS-1vL"/>
                         <outlet property="loadingLabel" destination="PX1-pq-mdh" id="YiF-vZ-HCb"/>
                         <segue destination="H9Q-zV-7Ro" kind="relationship" relationship="nextPage" id="Tse-wK-EOb"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-179" y="1110"/>
+            <point key="canvasLocation" x="-160" y="1111"/>
         </scene>
         <!--Сообщения-->
         <scene sceneID="vcA-ff-K21">
             <objects>
-                <controller title="Сообщения" id="H9Q-zV-7Ro" customClass="MsgInterfaceController" customModule="VK4Watch_WatchKit_Extension">
+                <controller identifier="Messages" title="Сообщения" id="H9Q-zV-7Ro" customClass="MsgInterfaceController" customModule="VK4Watch_WatchKit_Extension">
                     <items>
                         <table alignment="left" hidden="YES" id="6zc-bk-6qJ">
                             <items>
@@ -176,42 +163,10 @@
             </objects>
             <point key="canvasLocation" x="37" y="1502"/>
         </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
-            <objects>
-                <notificationController id="YCC-NB-fut">
-                    <items>
-                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
-                    </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
-                    <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
-                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
-                    </connections>
-                </notificationController>
-            </objects>
-            <point key="canvasLocation" x="220" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
-            <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="VK4Watch_WatchKit_App" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="Niz-AI-uX2">
-            <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="VK4Watch_WatchKit_App" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="345"/>
-        </scene>
     </scenes>
     <color key="tintColor" red="0.0" green="0.4779999852180481" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
     <resources>
         <image name="MaximIcon" width="50" height="50"/>
-        <image name="WylsaIcon" width="50" height="50"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.4779999852180481" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

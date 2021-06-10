@@ -20,7 +20,7 @@ class NewsObjectInterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         let data = context as! ContextNews
         body.setText(data.news.response.items[data.row].text)
-
+        if data.news.response.items[data.row].source_id! < 0{
         for name1 in 0...data.news.response.groups.count - 1{
             if data.news.response.items[data.row].source_id! * -1 == data.news.response.groups[name1].id{
                 name.setText(data.news.response.groups[name1].name)
@@ -30,6 +30,19 @@ class NewsObjectInterfaceController: WKInterfaceController {
                     self.icon.setImage(image1)
                 }.resume()
                 break
+            }
+          }
+        }else{
+            for name1 in 0...data.news.response.profiles.count - 1{
+                if data.news.response.items[data.row].source_id! == data.news.response.profiles[name1].id{
+                    name.setText(data.news.response.profiles[name1].first_name! + " " + data.news.response.profiles[name1].last_name!)
+                    URLSession.shared.dataTask(with: URL(string: data.news.response.profiles[name1].photo_50!)!) { data1, response1, error1 in
+                        var image1 = UIImage(data: data1!)
+                        image1 = imageWithRoundedCornerSize(cornerRadius: 17.5, usingImage: image1!)
+                        self.icon.setImage(image1)
+                    }.resume()
+                    break
+                }
             }
         }
         let secondsAgo = (Int(NSDate().timeIntervalSince1970) - data.news.response.items[data.row].date!)

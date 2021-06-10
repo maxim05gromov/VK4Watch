@@ -38,7 +38,14 @@ struct Items: Decodable {
     let attachments: [Attachments]?
 }
 struct Profiles: Decodable {
-    let first_name: String
+    let first_name: String?
+    let id: Int?
+    let last_name: String?
+    let can_access_closed: Bool?
+    let is_closed: Bool?
+    let sex: Int?
+    let screen_name: String?
+    let photo_50: String?
 }
 struct Groups: Decodable{
     let id: Int

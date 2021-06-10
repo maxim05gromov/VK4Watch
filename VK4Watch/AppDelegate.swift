@@ -7,16 +7,66 @@
 
 import UIKit
 import WatchConnectivity
+import SwiftyVK
+
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, SwiftyVKAuthorizatorDelegate, SwiftyVKPresenterDelegate, SwiftyVKSessionDelegate {
+    let defaults = UserDefaults.standard
+    func vkTokenCreated(for sessionId: String, info: [String : String]) {
+        print("token created in session \(sessionId) with info \(info)")
+        defaults.set(info["access_token"], forKey: "token")
+    }
+    
+    func vkTokenUpdated(for sessionId: String, info: [String : String]) {
+        print("token updated in session \(sessionId) with info \(info)")
+        defaults.set(info["access_token"], forKey: "token")
+    }
+    
+    func vkTokenRemoved(for sessionId: String) {
+        print("token removed in session \(sessionId)")
+        defaults.set("", forKey: "token")
+    }
+    
+    func vkNeedsScopes(for sessionId: String) -> Scopes {
+        let scopes: Scopes = [.offline,.friends,.wall]
+        return scopes
+    }
+    
+    func vkNeedToPresent(viewController: VKViewController) {
+        if let rootController = UIApplication.shared.keyWindow?.rootViewController {
+            rootController.present(viewController, animated: true)
+        }
+    }
+   
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        if let error = error {
+            print(error.localizedDescription)
+        }else{
+            print("WCSession activated with state \(activationState.rawValue)")
+        }
+    }
+   
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        print("Session become inactive")
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        session.activate()
+    }
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setupWC()
+        VK.setUp(appId: "7872799", delegate: self)
         return true
     }
-
+    func setupWC() {
+        if WCSession.isSupported(){
+            WCSession.default.delegate = self
+            WCSession.default.activate()
+        }
+    }
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
