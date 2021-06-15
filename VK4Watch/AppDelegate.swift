@@ -15,20 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, Swifty
     func vkTokenCreated(for sessionId: String, info: [String : String]) {
         print("token created in session \(sessionId) with info \(info)")
         defaults.set(info["access_token"], forKey: "token")
+        defaults.set(info["user_id"], forKey: "UID")
     }
     
     func vkTokenUpdated(for sessionId: String, info: [String : String]) {
         print("token updated in session \(sessionId) with info \(info)")
         defaults.set(info["access_token"], forKey: "token")
+        defaults.set(info["user_id"], forKey: "UID")
     }
     
     func vkTokenRemoved(for sessionId: String) {
         print("token removed in session \(sessionId)")
         defaults.set("", forKey: "token")
+        defaults.set("", forKey: "UID")
     }
     
     func vkNeedsScopes(for sessionId: String) -> Scopes {
-        let scopes: Scopes = [.offline,.friends,.wall]
+        let scopes: Scopes = [.offline,.friends,.wall,.messages]
         return scopes
     }
     

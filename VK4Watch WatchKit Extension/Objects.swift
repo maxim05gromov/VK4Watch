@@ -69,3 +69,61 @@ struct ContextNews: Decodable{
     let news: News
     let row: Int
 }
+
+struct messages:Decodable{
+    let response: MsgResponse?
+}
+struct MsgResponse: Decodable{
+    let count: Int?
+    let items: [MsgItems]?
+}
+struct MsgItems: Decodable {
+    let conversation: MsgConversation?
+    let last_message: Last_message?
+}
+struct Last_message: Decodable {
+    let date: Int?
+    let from_id: Int?
+    let id: Int?
+    let out: Int?
+    let peer_id: Int?
+    let text: String?
+    let conversation_message_id: Int?
+    
+    
+}
+struct MsgConversation: Decodable {
+    let peer: Peer?
+    let last_message_id: Int?
+    let in_reed: Int?
+    let out_reed: Int?
+    let sort_id: Sort_id?
+    let is_marked_unread: Bool?
+    let important: Bool?
+    let unanswered: Bool?
+    let can_write: Can_write?
+}
+struct Can_write: Decodable {
+    let allowed: Bool?
+    let reason: Int?
+}
+struct Sort_id: Decodable {
+    let major_id: Int?
+    let minor_id: Int?
+}
+struct Peer: Decodable{
+    let id: Int?
+    let type: String?
+    let local_id: Int?
+}
+struct UserInfo: Decodable {
+    let response: [Response]
+}
+struct Response: Decodable {
+    let first_name: String?
+        let id: Int?
+        let last_name: String?
+        let can_access_closed: Bool?
+        let is_closed: Bool?
+        let photo_50: String?
+}

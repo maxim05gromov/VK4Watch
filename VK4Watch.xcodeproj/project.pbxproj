@@ -11,7 +11,10 @@
 		402EFBB92957D971880DD353 /* Pods_VK4Watch_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D58F34CC2E85A75F72321 /* Pods_VK4Watch_WatchKit_App.framework */; };
 		B59C8F44266E6FDA003E4882 /* NewsObjectInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C8F43266E6FDA003E4882 /* NewsObjectInterfaceController.swift */; };
 		B59CBD1D266D2ED100C49C8C /* TableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59CBD1C266D2ED100C49C8C /* TableRowController.swift */; };
+		B5DE89D52675459E00BF7845 /* MessagesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE89D42675459E00BF7845 /* MessagesRow.swift */; };
+		B5DF070A26721E7E004249AC /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DF070926721E7E004249AC /* Cell.swift */; };
 		B5E707D8266FF9B700681F60 /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E707D7266FF9B700681F60 /* Objects.swift */; };
+		B5F3A28A2677ECDC009E3558 /* ChatInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F3A2892677ECDC009E3558 /* ChatInterfaceController.swift */; };
 		B5FA98C9266A78DE00CF2C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA98C8266A78DE00CF2C55 /* AppDelegate.swift */; };
 		B5FA98CB266A78DE00CF2C55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA98CA266A78DE00CF2C55 /* SceneDelegate.swift */; };
 		B5FA98CD266A78DE00CF2C55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA98CC266A78DE00CF2C55 /* ViewController.swift */; };
@@ -26,7 +29,6 @@
 		B5FA98F6266A78E100CF2C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5FA98F5266A78E100CF2C55 /* Assets.xcassets */; };
 		B5FA9907266A7F9B00CF2C55 /* NewsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA9906266A7F9B00CF2C55 /* NewsInterfaceController.swift */; };
 		B5FA9909266A818B00CF2C55 /* MsgInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA9908266A818B00CF2C55 /* MsgInterfaceController.swift */; };
-		B5FA990B266AA32600CF2C55 /* ChatInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA990A266AA32600CF2C55 /* ChatInterfaceController.swift */; };
 		EE207C8265396FE3339DFC93 /* Pods_VK4Watch_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5E1D3692A76AB4C94149079 /* Pods_VK4Watch_WatchKit_Extension.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +82,10 @@
 		917DDC59299544FCF430F5C8 /* Pods-VK4Watch WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK4Watch WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-VK4Watch WatchKit App/Pods-VK4Watch WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		B59C8F43266E6FDA003E4882 /* NewsObjectInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsObjectInterfaceController.swift; sourceTree = "<group>"; };
 		B59CBD1C266D2ED100C49C8C /* TableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowController.swift; sourceTree = "<group>"; };
+		B5DE89D42675459E00BF7845 /* MessagesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesRow.swift; sourceTree = "<group>"; };
+		B5DF070926721E7E004249AC /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		B5E707D7266FF9B700681F60 /* Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
+		B5F3A2892677ECDC009E3558 /* ChatInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInterfaceController.swift; sourceTree = "<group>"; };
 		B5FA98C5266A78DE00CF2C55 /* VK4Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK4Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FA98C8266A78DE00CF2C55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5FA98CA266A78DE00CF2C55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +150,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B5BA0B602677D56B0042982A /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				B5FA990A266AA32600CF2C55 /* ChatInterfaceController.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		B5FA98BC266A78DE00CF2C55 = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +167,7 @@
 				B5FA98C6266A78DE00CF2C55 /* Products */,
 				D9397DFAA82CE482126AC0A1 /* Pods */,
 				23936C55BFF02CC221158CF7 /* Frameworks */,
+				B5BA0B602677D56B0042982A /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +187,7 @@
 				B5FA98C8266A78DE00CF2C55 /* AppDelegate.swift */,
 				B5FA98CA266A78DE00CF2C55 /* SceneDelegate.swift */,
 				B5FA98CC266A78DE00CF2C55 /* ViewController.swift */,
+				B5DF070926721E7E004249AC /* Cell.swift */,
 				B5FA98CE266A78DE00CF2C55 /* Main.storyboard */,
 				B5FA98D1266A78DF00CF2C55 /* Assets.xcassets */,
 				B5FA98D3266A78DF00CF2C55 /* LaunchScreen.storyboard */,
@@ -200,10 +215,11 @@
 				B5FA98F8266A78E100CF2C55 /* PushNotificationPayload.apns */,
 				B5FA9906266A7F9B00CF2C55 /* NewsInterfaceController.swift */,
 				B5FA9908266A818B00CF2C55 /* MsgInterfaceController.swift */,
-				B5FA990A266AA32600CF2C55 /* ChatInterfaceController.swift */,
 				B59CBD1C266D2ED100C49C8C /* TableRowController.swift */,
 				B59C8F43266E6FDA003E4882 /* NewsObjectInterfaceController.swift */,
 				B5E707D7266FF9B700681F60 /* Objects.swift */,
+				B5DE89D42675459E00BF7845 /* MessagesRow.swift */,
+				B5F3A2892677ECDC009E3558 /* ChatInterfaceController.swift */,
 			);
 			path = "VK4Watch WatchKit Extension";
 			sourceTree = "<group>";
@@ -445,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5FA98CD266A78DE00CF2C55 /* ViewController.swift in Sources */,
+				B5DF070A26721E7E004249AC /* Cell.swift in Sources */,
 				B5FA98C9266A78DE00CF2C55 /* AppDelegate.swift in Sources */,
 				B5FA98CB266A78DE00CF2C55 /* SceneDelegate.swift in Sources */,
 			);
@@ -454,10 +471,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5F3A28A2677ECDC009E3558 /* ChatInterfaceController.swift in Sources */,
 				B5FA9907266A7F9B00CF2C55 /* NewsInterfaceController.swift in Sources */,
 				B59C8F44266E6FDA003E4882 /* NewsObjectInterfaceController.swift in Sources */,
-				B5FA990B266AA32600CF2C55 /* ChatInterfaceController.swift in Sources */,
 				B5FA98F0266A78E000CF2C55 /* ExtensionDelegate.swift in Sources */,
+				B5DE89D52675459E00BF7845 /* MessagesRow.swift in Sources */,
 				B5E707D8266FF9B700681F60 /* Objects.swift in Sources */,
 				B5FA9909266A818B00CF2C55 /* MsgInterfaceController.swift in Sources */,
 				B59CBD1D266D2ED100C49C8C /* TableRowController.swift in Sources */,
@@ -639,7 +657,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Debug;
 		};
@@ -664,7 +682,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};
@@ -685,7 +703,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Debug;
 		};
@@ -707,7 +725,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};
@@ -720,7 +738,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5R2Q775TYR;
 				INFOPLIST_FILE = VK4Watch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -742,7 +760,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5R2Q775TYR;
 				INFOPLIST_FILE = VK4Watch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

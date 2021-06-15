@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19115.2" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38"/>
     <dependencies>
-        <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19026"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +29,7 @@
                         </group>
                         <label width="1" alignment="center" textAlignment="left" numberOfLines="0" id="oxo-qC-adm"/>
                         <imageView alignment="center" id="XfT-gK-QhL"/>
-                        <label width="1" alignment="center" text="Загрузка картинки..." textAlignment="center" numberOfLines="0" id="9yU-BD-Lny"/>
+                        <label width="1" alignment="center" text="Загрузка вложений..." textAlignment="center" numberOfLines="0" id="9yU-BD-Lny"/>
                     </items>
                     <connections>
                         <outlet property="body" destination="oxo-qC-adm" id="I3j-cQ-Tcx"/>
@@ -111,53 +110,70 @@
             <objects>
                 <controller identifier="Messages" title="Сообщения" id="H9Q-zV-7Ro" customClass="MsgInterfaceController" customModule="VK4Watch_WatchKit_Extension">
                     <items>
-                        <table alignment="left" hidden="YES" id="6zc-bk-6qJ">
+                        <table alignment="left" id="6zc-bk-6qJ">
                             <items>
-                                <tableRow identifier="MsgCell" id="hpZ-w4-T5a">
+                                <tableRow identifier="MsgCell" id="hpZ-w4-T5a" customClass="MessagesRow" customModule="VK4Watch_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="eyj-uo-YtQ">
                                         <items>
                                             <imageView width="30" height="30" alignment="left" verticalAlignment="center" image="MaximIcon" id="gOk-fL-Uu2"/>
-                                            <label alignment="left" verticalAlignment="center" text="Максим" id="x66-OA-aBF">
-                                                <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                                            </label>
+                                            <group width="1" alignment="left" verticalAlignment="center" layout="vertical" spacing="0.0" id="atd-he-jb9">
+                                                <items>
+                                                    <label width="101" alignment="left" verticalAlignment="center" id="x66-OA-aBF">
+                                                        <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                    </label>
+                                                    <label width="100" alignment="left" verticalAlignment="center" textAlignment="left" id="hde-Pb-0qT">
+                                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                    </label>
+                                                </items>
+                                            </group>
                                         </items>
-                                        <connections>
-                                            <segue destination="Amq-kS-Qjg" kind="push" id="oKi-sd-mro"/>
-                                        </connections>
                                     </group>
+                                    <connections>
+                                        <outlet property="Icon" destination="gOk-fL-Uu2" id="OHC-qK-Cao"/>
+                                        <outlet property="Name" destination="x66-OA-aBF" id="5sb-7w-a7L"/>
+                                        <outlet property="Text" destination="hde-Pb-0qT" id="SRE-Sa-xQs"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
-                        <label alignment="center" verticalAlignment="center" text="К сожалению, пока что сообщения не работают. Ждём разрешения от разработчиков ВК" textAlignment="center" numberOfLines="0" id="GJd-2X-sRH"/>
                     </items>
                     <connections>
                         <outlet property="TableView" destination="6zc-bk-6qJ" id="VTt-aX-dFW"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="37" y="1110"/>
+            <point key="canvasLocation" x="80" y="1110"/>
         </scene>
         <!--Максим-->
         <scene sceneID="cYq-Xg-Rhl">
             <objects>
                 <controller identifier="Message" title="Максим" id="Amq-kS-Qjg" customClass="ChatInterfaceController" customModule="VK4Watch_WatchKit_Extension">
                     <items>
-                        <table alignment="left" id="pqx-Ev-KNs">
+                        <group width="1" alignment="left" layout="vertical" id="3fe-sC-Mky">
                             <items>
-                                <tableRow identifier="ChatCell" id="jSZ-kB-b5F">
-                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" radius="10" id="9j9-dd-Bjf">
-                                        <items>
-                                            <label alignment="center" verticalAlignment="center" text="Label" textAlignment="right" id="Vnt-Xm-NMq"/>
-                                            <imageView alignment="center" verticalAlignment="center" id="f8t-Kz-I0f"/>
-                                        </items>
-                                        <color key="backgroundColor" name="AccentColor"/>
-                                    </group>
-                                </tableRow>
+                                <table alignment="left" id="pqx-Ev-KNs">
+                                    <items>
+                                        <tableRow identifier="ChatCell" id="jSZ-kB-b5F">
+                                            <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" radius="10" id="9j9-dd-Bjf">
+                                                <items>
+                                                    <label alignment="center" verticalAlignment="center" text="Label" textAlignment="right" id="Vnt-Xm-NMq"/>
+                                                    <imageView alignment="center" verticalAlignment="center" id="f8t-Kz-I0f"/>
+                                                </items>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                            </group>
+                                        </tableRow>
+                                    </items>
+                                </table>
                             </items>
-                        </table>
+                        </group>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Новое сообщение" id="xBN-tc-b9A">
+                            <connections>
+                                <action selector="NewMessage" destination="Amq-kS-Qjg" id="l0v-Ie-2g0"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
-                        <outlet property="TableView" destination="pqx-Ev-KNs" id="AG5-Wn-G8b"/>
+                        <outlet property="Table" destination="pqx-Ev-KNs" id="a5G-ul-ion"/>
                     </connections>
                 </controller>
             </objects>
