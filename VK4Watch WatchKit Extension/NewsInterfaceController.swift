@@ -25,6 +25,7 @@ class NewsInterfaceController: WKInterfaceController{
     var dataForCell: Data?
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        print(UserDefaults.standard.string(forKey: "answersList") ?? "")
         print(UserDefaults.standard.string(forKey: "Token") ?? "")
         if UserDefaults.standard.string(forKey: "Token") != nil {
             if UserDefaults.standard.string(forKey: "Token") != "" {
@@ -32,7 +33,7 @@ class NewsInterfaceController: WKInterfaceController{
                 WelcomeLabel2.setHidden(true)
                 self.TableView.setHidden(true)
                 loadingLabel.setHidden(false)
-                let url = URL(string: "https://api.vk.com/method/newsfeed.get?&count=150&filters=post&access_token=" + UserDefaults.standard.string(forKey: "Token")! + "&v=5.131")!
+                let url = URL(string: "https://api.vk.com/method/newsfeed.get?&count=100&filters=post&access_token=" + UserDefaults.standard.string(forKey: "Token")! + "&v=5.131")!
                 let session = URLSession.shared
                 session.dataTask(with: url, completionHandler: { data, response, error in
                     guard let data = data else {return}

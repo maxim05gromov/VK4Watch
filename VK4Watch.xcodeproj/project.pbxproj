@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		35F6F9967959E8F69D446B3F /* Pods_VK4Watch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C7F56E292F370BBBC14201 /* Pods_VK4Watch.framework */; };
 		402EFBB92957D971880DD353 /* Pods_VK4Watch_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69D58F34CC2E85A75F72321 /* Pods_VK4Watch_WatchKit_App.framework */; };
+		B51CA5DB270DB64F00396824 /* SendInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51CA5DA270DB64F00396824 /* SendInterfaceController.swift */; };
+		B532ABF4270DC68F0039F787 /* AnswersRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B532ABF3270DC68F0039F787 /* AnswersRow.swift */; };
+		B559B1A62678A2A8009B3790 /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B559B19E2678993C009B3790 /* ChatRow.swift */; };
+		B56879F326DBA3ED0039A59E /* AnswersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56879F226DBA3ED0039A59E /* AnswersViewController.swift */; };
+		B56879F526DBB5BF0039A59E /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56879F426DBB5BF0039A59E /* NewsViewController.swift */; };
 		B59C8F44266E6FDA003E4882 /* NewsObjectInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C8F43266E6FDA003E4882 /* NewsObjectInterfaceController.swift */; };
 		B59CBD1D266D2ED100C49C8C /* TableRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59CBD1C266D2ED100C49C8C /* TableRowController.swift */; };
 		B5DE89D52675459E00BF7845 /* MessagesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5DE89D42675459E00BF7845 /* MessagesRow.swift */; };
@@ -80,6 +85,11 @@
 		835C479152982779D3F72490 /* Pods-VK4Watch WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK4Watch WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-VK4Watch WatchKit App/Pods-VK4Watch WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		914207F7EF4A73B6115AEA01 /* Pods-VK4Watch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK4Watch.debug.xcconfig"; path = "Target Support Files/Pods-VK4Watch/Pods-VK4Watch.debug.xcconfig"; sourceTree = "<group>"; };
 		917DDC59299544FCF430F5C8 /* Pods-VK4Watch WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK4Watch WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-VK4Watch WatchKit App/Pods-VK4Watch WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		B51CA5DA270DB64F00396824 /* SendInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendInterfaceController.swift; sourceTree = "<group>"; };
+		B532ABF3270DC68F0039F787 /* AnswersRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersRow.swift; sourceTree = "<group>"; };
+		B559B19E2678993C009B3790 /* ChatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
+		B56879F226DBA3ED0039A59E /* AnswersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswersViewController.swift; sourceTree = "<group>"; };
+		B56879F426DBB5BF0039A59E /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		B59C8F43266E6FDA003E4882 /* NewsObjectInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsObjectInterfaceController.swift; sourceTree = "<group>"; };
 		B59CBD1C266D2ED100C49C8C /* TableRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowController.swift; sourceTree = "<group>"; };
 		B5DE89D42675459E00BF7845 /* MessagesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesRow.swift; sourceTree = "<group>"; };
@@ -187,8 +197,10 @@
 				B5FA98C8266A78DE00CF2C55 /* AppDelegate.swift */,
 				B5FA98CA266A78DE00CF2C55 /* SceneDelegate.swift */,
 				B5FA98CC266A78DE00CF2C55 /* ViewController.swift */,
+				B56879F226DBA3ED0039A59E /* AnswersViewController.swift */,
 				B5DF070926721E7E004249AC /* Cell.swift */,
 				B5FA98CE266A78DE00CF2C55 /* Main.storyboard */,
+				B56879F426DBB5BF0039A59E /* NewsViewController.swift */,
 				B5FA98D1266A78DF00CF2C55 /* Assets.xcassets */,
 				B5FA98D3266A78DF00CF2C55 /* LaunchScreen.storyboard */,
 				B5FA98D6266A78DF00CF2C55 /* Info.plist */,
@@ -220,6 +232,9 @@
 				B5E707D7266FF9B700681F60 /* Objects.swift */,
 				B5DE89D42675459E00BF7845 /* MessagesRow.swift */,
 				B5F3A2892677ECDC009E3558 /* ChatInterfaceController.swift */,
+				B559B19E2678993C009B3790 /* ChatRow.swift */,
+				B51CA5DA270DB64F00396824 /* SendInterfaceController.swift */,
+				B532ABF3270DC68F0039F787 /* AnswersRow.swift */,
 			);
 			path = "VK4Watch WatchKit Extension";
 			sourceTree = "<group>";
@@ -463,7 +478,9 @@
 				B5FA98CD266A78DE00CF2C55 /* ViewController.swift in Sources */,
 				B5DF070A26721E7E004249AC /* Cell.swift in Sources */,
 				B5FA98C9266A78DE00CF2C55 /* AppDelegate.swift in Sources */,
+				B56879F526DBB5BF0039A59E /* NewsViewController.swift in Sources */,
 				B5FA98CB266A78DE00CF2C55 /* SceneDelegate.swift in Sources */,
+				B56879F326DBA3ED0039A59E /* AnswersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,9 +489,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5F3A28A2677ECDC009E3558 /* ChatInterfaceController.swift in Sources */,
+				B532ABF4270DC68F0039F787 /* AnswersRow.swift in Sources */,
 				B5FA9907266A7F9B00CF2C55 /* NewsInterfaceController.swift in Sources */,
 				B59C8F44266E6FDA003E4882 /* NewsObjectInterfaceController.swift in Sources */,
 				B5FA98F0266A78E000CF2C55 /* ExtensionDelegate.swift in Sources */,
+				B559B1A62678A2A8009B3790 /* ChatRow.swift in Sources */,
+				B51CA5DB270DB64F00396824 /* SendInterfaceController.swift in Sources */,
 				B5DE89D52675459E00BF7845 /* MessagesRow.swift in Sources */,
 				B5E707D8266FF9B700681F60 /* Objects.swift in Sources */,
 				B5FA9909266A818B00CF2C55 /* MsgInterfaceController.swift in Sources */,
@@ -643,14 +663,14 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5R2Q775TYR;
+				DEVELOPMENT_TEAM = PP9463XGJ2;
 				INFOPLIST_FILE = "VK4Watch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = GM.VK4Watch.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = GM.VK4WatchApp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -668,14 +688,14 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5R2Q775TYR;
+				DEVELOPMENT_TEAM = PP9463XGJ2;
 				INFOPLIST_FILE = "VK4Watch WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = GM.VK4Watch.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = GM.VK4WatchApp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -694,10 +714,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5R2Q775TYR;
+				DEVELOPMENT_TEAM = PP9463XGJ2;
 				IBSC_MODULE = VK4Watch_WatchKit_Extension;
 				INFOPLIST_FILE = "VK4Watch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = GM.VK4Watch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = GM.VK4WatchApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -715,10 +735,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5R2Q775TYR;
+				DEVELOPMENT_TEAM = PP9463XGJ2;
 				IBSC_MODULE = VK4Watch_WatchKit_Extension;
 				INFOPLIST_FILE = "VK4Watch WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = GM.VK4Watch.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = GM.VK4WatchApp.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -736,14 +756,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5R2Q775TYR;
+				DEVELOPMENT_TEAM = PP9463XGJ2;
 				INFOPLIST_FILE = VK4Watch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = GM.VK4Watch;
+				PRODUCT_BUNDLE_IDENTIFIER = GM.VK4WatchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -758,14 +778,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5R2Q775TYR;
+				DEVELOPMENT_TEAM = PP9463XGJ2;
 				INFOPLIST_FILE = VK4Watch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = GM.VK4Watch;
+				PRODUCT_BUNDLE_IDENTIFIER = GM.VK4WatchApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;

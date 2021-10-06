@@ -10,13 +10,16 @@ import Foundation
 
 
 class MsgInterfaceController: WKInterfaceController {
-
+    var names = [String]()
     @IBOutlet weak var TableView: WKInterfaceTable!
+    @IBOutlet weak var pleaseEnterText: WKInterfaceLabel!
     var loadedData = messages.init(response: nil)
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        self.TableView.setHidden(true)
         if UserDefaults.standard.string(forKey: "Token") != nil {
             if UserDefaults.standard.string(forKey: "Token") != "" {
+                pleaseEnterText.setHidden(true)
                 let url = URL(string: "https://api.vk.com/method/messages.getConversations?&count=100&access_token=" + UserDefaults.standard.string(forKey: "Token")! + "&v=5.131")!
                 URLSession.shared.dataTask(with: url) { data, response, error in
                     if let data = data{
@@ -35,6 +38,7 @@ class MsgInterfaceController: WKInterfaceController {
                                     do{
                                         let user = try JSONDecoder().decode(UserInfo.self, from: data)
                                         controller.Name.setText("\(user.response[0].first_name!) \(user.response[0].last_name!)")
+                                        self.names.append("\(user.response[0].first_name!) \(user.response[0].last_name!)")
                                         URLSession.shared.dataTask(with: URL(string: user.response[0].photo_50!)!) { data1, response1, error1 in
                                             if let data1 = data1 {
                                                 var image = UIImage(data: data1)
@@ -48,6 +52,11 @@ class MsgInterfaceController: WKInterfaceController {
                                     }
                                     }
                             }.resume()
+                            }
+                            if item == (msgList.response?.items!.count)! - 1 {
+                                DispatchQueue.main.async {
+                                    self.TableView.setHidden(false)
+                                }
                             }
                         }
                         

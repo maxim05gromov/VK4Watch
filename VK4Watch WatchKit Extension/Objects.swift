@@ -121,9 +121,38 @@ struct UserInfo: Decodable {
 }
 struct Response: Decodable {
     let first_name: String?
-        let id: Int?
-        let last_name: String?
-        let can_access_closed: Bool?
-        let is_closed: Bool?
-        let photo_50: String?
+    let id: Int?
+    let last_name: String?
+    let can_access_closed: Bool?
+    let is_closed: Bool?
+    let photo_50: String?
+}
+
+
+struct Chat: Decodable{
+    let response: ChatResponse?
+}
+struct ChatResponse: Decodable{
+    let count: Int?
+    let items: [ChatItem]?
+}
+struct ChatItem: Decodable {
+    let date: Int?
+    let from_id: Int?
+    let id: Int?
+    let out: Int?
+    let peer_id: Int?
+    let text: String?
+    let conversation_message_id: Int?
+    let fwd_messages: [ChatFwdMessages]?
+    let important: Bool?
+    let random_id: Int?
+    let attachments: [ChatAttachments]?
+    let is_hidden: Bool?
+}
+struct ChatFwdMessages: Decodable{
+    
+}
+struct ChatAttachments: Decodable {
+    
 }

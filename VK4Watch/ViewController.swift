@@ -19,6 +19,7 @@ struct Response: Decodable {
         let is_closed: Bool
         let photo_200: String
 }
+
 func imageWithRoundedCornerSize(cornerRadius:CGFloat, usingImage original: UIImage) -> UIImage {
     let frame = CGRect(x: 0, y: 0, width: original.size.width, height: original.size.height)
     UIGraphicsBeginImageContextWithOptions(original.size, false, 1.0)
@@ -33,6 +34,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var imageData = Data()
     var username = ""
     var image1 = UIImage()
+    func logout(){
+        VK.sessions.default.logOut()
+        do {
+            try WCSession.default.updateApplicationContext(["a" : NSDate.init(), "answersList": UserDefaults.standard.object(forKey: "answersList")!, "token":  ""])
+        } catch {
+            print("Loged out, sending error")
+            let alert = UIAlertController(title: "Ошибка отправки данных на часы", message: "Не удалось удалить данные Вашего аккаунта с часов. Проверьте, установлено ли приложение на часах и выключен ли на них авиарежим. Данные будут удалены автоматически при следующем подключении к часам", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Продолжить", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+        Table.reloadData()
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0{
             if VK.sessions.default.accessToken != nil{
@@ -67,22 +83,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     cell.Label.text = "\(username)"
                         cell.cellImage.image = image1
                     cell.cellImage.isHidden = false
-
+                    cell.NewLabel.text = ""
 
                     
                 }else{
-                    cell.Label.text = "Выйти из аккаунта"
+                    cell.NewLabel.text = "Выйти из аккаунта"
+                    cell.Label.text = ""
                     cell.cellImage.isHidden = true
                 }
             }else{
-                cell.Label.text = "Войти"
+                cell.NewLabel.text = "Войти"
+                cell.Label.text = ""
                 cell.cellImage.isHidden = true
             }
         }else if indexPath.section == 1{
             if indexPath.row == 0{
-                cell.Label.text = "Списки новостей"
+                cell.NewLabel.text = "Списки новостей"
+                cell.Label.text = ""
+            }else if indexPath.row == 1{
+                cell.NewLabel.text = "Ответы по умолчанию"
+                cell.Label.text = ""
             }else{
-            cell.Label.text = ""
+                cell.NewLabel.text = ""
+                cell.Label.text = ""
             }
             cell.cellImage.isHidden = true
         }
@@ -97,6 +120,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }else{
                 login()
             }
+        }else if indexPath.section == 1{
+            if indexPath.row == 1{
+                let newVC = storyboard!.instantiateViewController(withIdentifier: "Answers")
+                self.navigationController?.pushViewController(newVC, animated: true)
+            }else if indexPath.row == 0{
+                let newVC = storyboard!.instantiateViewController(withIdentifier: "News")
+                self.navigationController?.pushViewController(newVC, animated: true)
+            }
         }
         
         Table.deselectRow(at: indexPath, animated: true)
@@ -109,7 +140,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if section == 0{
             return "Аккаунт"
         }else if section == 1{
-            return "Настройки клиента для часов"
+            return "Настройки клиента"
         }else{
             return ""
         }
@@ -117,6 +148,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var Table: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        if UserDefaults.standard.object(forKey: "answersList") == nil{
+            let answersList = ["Привет!", "Как дела?", "Скоро буду.", "ОК","Конечно!","Без проблем!","Спасибо!","Поговорим позже?","Сейчас говорить не могу...","На совещании. Можно я перезвоню позже?","До скорого!","Да","Да, пожалуйста!","Ура!","Отлично!","Нет","Прости, нет.","Нет, спасибо!","Нет!",]
+            UserDefaults.standard.set(answersList, forKey: "answersList")
+        }
         self.Table.delegate = self
         self.Table.dataSource = self
         navigationController?.delegate = self
@@ -145,7 +180,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 if WCSession.isSupported() {
                     do {
                         print(NSDate.init())
-                        try WCSession.default.updateApplicationContext(["a" : NSDate.init(), "token": UserDefaults.standard.string(forKey: "token")!])
+                        try WCSession.default.updateApplicationContext(["a" : NSDate.init(), "answersList": UserDefaults.standard.object(forKey: "answersList")!, "token": UserDefaults.standard.string(forKey: "token") ?? ""])
                         allIsOk = true
                     } catch {
                         print("Authorized, sending error!")
@@ -199,18 +234,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         )
     }
-    func logout(){
-        VK.sessions.default.logOut()
-        do {
-            try WCSession.default.updateApplicationContext(["a" : NSDate.init(), "token": ""])
-        } catch {
-            print("Loged out, sending error")
-            let alert = UIAlertController(title: "Ошибка отправки данных на часы", message: "Не удалось удалить данные Вашего аккаунта с часов. Проверьте, установлено ли приложение на часах и выключен ли на них авиарежим. Данные будут удалены автоматически при следующем подключении к часам", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Продолжить", style: .default, handler: nil)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-        }
-        Table.reloadData()
-    }
+    
 }
 

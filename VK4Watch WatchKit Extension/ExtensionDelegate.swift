@@ -30,8 +30,12 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        print(applicationContext)
         UserDefaults.standard.set(applicationContext["token"] ?? "", forKey: "Token")
+        UserDefaults.standard.set(applicationContext["answersList"] as? Array<Any> ?? [], forKey: "answersList")
         WKInterfaceController.reloadRootPageControllers(withNames: ["NewsPage", "Messages"], contexts: [[:] as AnyObject, [:] as AnyObject], orientation: .horizontal, pageIndex: 0)
+        
+        
     }
     func applicationWillResignActive() {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

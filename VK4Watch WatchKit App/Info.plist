@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>GM.VK4Watch</string>
+	<string>GM.VK4WatchApp</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

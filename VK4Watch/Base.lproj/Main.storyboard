@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kDt-c2-jFR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kDt-c2-jFR">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,37 +37,49 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="51" id="3fU-eK-v0T" customClass="Cell" customModule="VK4Watch" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="55.5" width="343" height="51"/>
+                                        <rect key="frame" x="16" y="49.5" width="343" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3fU-eK-v0T" id="dV8-W3-6gw">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WDW-y9-CkC">
-                                                    <rect key="frame" x="2" y="2" width="47" height="47"/>
+                                                    <rect key="frame" x="15" y="5" width="60" height="41"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="WDW-y9-CkC" secondAttribute="height" multiplier="1:1" id="v4h-8g-c1j"/>
+                                                        <constraint firstAttribute="height" constant="60" id="GNM-zD-tT2"/>
+                                                        <constraint firstAttribute="width" constant="60" id="yvo-V4-AY9"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cj9-w1-Ju9">
-                                                    <rect key="frame" x="16" y="11" width="311" height="29"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cj9-w1-Ju9">
+                                                    <rect key="frame" x="83" y="11" width="244" height="29"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mj-VR-c4m">
+                                                    <rect key="frame" x="24" y="11" width="303" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="WDW-y9-CkC" secondAttribute="bottom" constant="2" id="CN3-Dc-vST"/>
-                                                <constraint firstItem="WDW-y9-CkC" firstAttribute="top" secondItem="dV8-W3-6gw" secondAttribute="top" constant="2" id="FVh-mO-WB9"/>
-                                                <constraint firstItem="WDW-y9-CkC" firstAttribute="leading" secondItem="dV8-W3-6gw" secondAttribute="leading" constant="2" id="FYX-Ez-Aw8"/>
-                                                <constraint firstItem="cj9-w1-Ju9" firstAttribute="leading" secondItem="dV8-W3-6gw" secondAttribute="leadingMargin" id="Kfk-QR-fNK"/>
+                                                <constraint firstItem="cj9-w1-Ju9" firstAttribute="leading" secondItem="WDW-y9-CkC" secondAttribute="trailing" constant="8" id="9DT-ll-wFR"/>
+                                                <constraint firstItem="3Mj-VR-c4m" firstAttribute="leading" secondItem="dV8-W3-6gw" secondAttribute="leadingMargin" constant="8" id="KH1-kN-Gv9"/>
                                                 <constraint firstItem="cj9-w1-Ju9" firstAttribute="top" secondItem="dV8-W3-6gw" secondAttribute="topMargin" id="MEd-2V-5DY"/>
+                                                <constraint firstAttribute="bottom" secondItem="WDW-y9-CkC" secondAttribute="bottom" constant="5" id="R60-Tr-hHz"/>
+                                                <constraint firstItem="WDW-y9-CkC" firstAttribute="leading" secondItem="dV8-W3-6gw" secondAttribute="leading" constant="15" id="Wsc-Ou-URt"/>
+                                                <constraint firstItem="3Mj-VR-c4m" firstAttribute="top" secondItem="dV8-W3-6gw" secondAttribute="top" constant="11" id="bnB-Tj-4yk"/>
                                                 <constraint firstItem="cj9-w1-Ju9" firstAttribute="bottom" secondItem="dV8-W3-6gw" secondAttribute="bottomMargin" id="cPA-on-V16"/>
+                                                <constraint firstAttribute="bottom" secondItem="3Mj-VR-c4m" secondAttribute="bottom" constant="11" id="gup-AS-aat"/>
+                                                <constraint firstItem="WDW-y9-CkC" firstAttribute="top" secondItem="dV8-W3-6gw" secondAttribute="top" constant="5" id="iQF-g4-Bay"/>
+                                                <constraint firstAttribute="trailing" secondItem="3Mj-VR-c4m" secondAttribute="trailing" constant="16" id="oBy-R8-oYp"/>
                                                 <constraint firstItem="cj9-w1-Ju9" firstAttribute="trailing" secondItem="dV8-W3-6gw" secondAttribute="trailingMargin" id="q8B-9F-ZuQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="Label" destination="cj9-w1-Ju9" id="HaS-FU-eYR"/>
+                                            <outlet property="NewLabel" destination="3Mj-VR-c4m" id="MnU-FQ-5wl"/>
                                             <outlet property="cellImage" destination="WDW-y9-CkC" id="HRI-gb-4Zm"/>
                                         </connections>
                                     </tableViewCell>
@@ -83,10 +95,13 @@
                             <constraint firstItem="hOq-li-Rv9" firstAttribute="bottom" secondItem="9f5-sM-SVt" secondAttribute="bottom" id="mLZ-VX-shG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="VK4Watch" largeTitleDisplayMode="always" id="cgV-5u-Zw8"/>
+                    <navigationItem key="navigationItem" title="VK4Watch" largeTitleDisplayMode="always" id="cgV-5u-Zw8">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="O3V-Ef-wn7"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="Table" destination="hOq-li-Rv9" id="MnM-A0-Uk4"/>
                         <segue destination="oVK-2B-QBd" kind="show" id="NpD-tS-93V"/>
+                        <segue destination="2vt-kK-iBL" kind="show" id="Md7-7p-gkf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="89b-Xs-Dsy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -96,7 +111,7 @@
         <!--Списки новостей-->
         <scene sceneID="nj3-bV-24R">
             <objects>
-                <viewController id="oVK-2B-QBd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="News" id="oVK-2B-QBd" customClass="NewsViewController" customModule="VK4Watch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="95o-qM-bY6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,7 +120,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vxY-9a-sgl">
-                                        <rect key="frame" x="16" y="55.5" width="343" height="43.5"/>
+                                        <rect key="frame" x="16" y="49.5" width="343" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vxY-9a-sgl" id="CcS-Om-8eW">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
@@ -137,11 +152,61 @@
                             <constraint firstItem="yf7-9x-8qQ" firstAttribute="trailing" secondItem="nCC-OG-bjD" secondAttribute="trailing" id="qNq-hi-HT8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Списки новостей" id="jEy-3z-jqX"/>
+                    <navigationItem key="navigationItem" title="Списки новостей" largeTitleDisplayMode="never" id="jEy-3z-jqX">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="sHB-fC-cHF"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FrR-vP-stM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1434" y="105"/>
+            <point key="canvasLocation" x="1433" y="-237"/>
+        </scene>
+        <!--Ответы по умолчанию-->
+        <scene sceneID="o0u-tC-bEN">
+            <objects>
+                <viewController storyboardIdentifier="Answers" id="2vt-kK-iBL" customClass="AnswersViewController" customModule="VK4Watch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ACR-V2-4FR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ch7-BP-1WY">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Jp3-UP-7Ca">
+                                        <rect key="frame" x="16" y="49.5" width="343" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Jp3-UP-7Ca" id="Kdc-f0-kfy">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xrx-Ma-ygn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ch7-BP-1WY" firstAttribute="trailing" secondItem="Xrx-Ma-ygn" secondAttribute="trailing" id="86h-gf-LNy"/>
+                            <constraint firstItem="ch7-BP-1WY" firstAttribute="top" secondItem="Xrx-Ma-ygn" secondAttribute="top" id="Nbo-tF-URN"/>
+                            <constraint firstItem="ch7-BP-1WY" firstAttribute="leading" secondItem="Xrx-Ma-ygn" secondAttribute="leading" id="i1X-Cm-iJ1"/>
+                            <constraint firstItem="ch7-BP-1WY" firstAttribute="bottom" secondItem="Xrx-Ma-ygn" secondAttribute="bottom" id="yyk-TR-M4c"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ответы по умолчанию" largeTitleDisplayMode="never" id="KJC-GU-vMN">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="8ok-gx-8Sj"/>
+                        <barButtonItem key="rightBarButtonItem" title="Правка" style="plain" id="Cl0-NB-ni6">
+                            <connections>
+                                <action selector="EditButton:" destination="2vt-kK-iBL" id="hPa-uq-GWt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="EditButtonOutlet" destination="Cl0-NB-ni6" id="p1Z-jv-d6C"/>
+                        <outlet property="TableView" destination="ch7-BP-1WY" id="gM2-fQ-Xnt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ues-WJ-Y9X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1432.8" y="437.63118440779613"/>
         </scene>
     </scenes>
     <resources>
